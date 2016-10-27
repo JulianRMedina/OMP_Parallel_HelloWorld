@@ -13,7 +13,7 @@ int main(){
 		printf("Hello World from thread %d!\n", tid);
 		
 		//only master counts and prints number of threads
-	#pragma omp master
+		#pragma omp master
 		{
 			nthreads = omp_get_num_threads();
 			printf("There is a total of %d threads.\n", nthreads);
