@@ -6,7 +6,7 @@ int main(){
 	int nthreads; int tid;
 		
 	//ask for threads giving them each a private copy of nthreads and tid
-#pragma omp parallel private(tid)
+	#pragma omp parallel private(tid)
 	{
 		//get thread id and print Hello World from strings
 		tid = omp_get_thread_num();
