@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main(){
 	int nthreads; int tid;
 		
@@ -12,7 +13,7 @@ int main(){
 		tid = omp_get_thread_num();
 		printf("Hello World from thread %d!\n", tid);
 		
-		//only master counts and prints number of threads
+	//only master counts and prints number of threads
 	#pragma omp master
 		{
 			nthreads = omp_get_num_threads();
